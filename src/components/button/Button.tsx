@@ -5,9 +5,6 @@ import classes from '../header/header.module.css'
 
 
 const Button: React.FC<buttonData> = (props) => {
-
-	debugger
-
 	return (
 		<div className={classes.button}>
 			<div className={`${classes.button__container} ${classes[props.theme]}`}>
