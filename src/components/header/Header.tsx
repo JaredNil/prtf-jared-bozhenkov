@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { headerStateI } from '../../types';
 import Button from './../button/Button';
-import classes from './header.module.css';
-import classesApp from '../app.module.css'
+import classes from './header.module.scss';
+import classesApp from '../app.module.scss'
 
 const Header: React.FC<headerStateI> = (props) => {
 
@@ -19,7 +19,11 @@ const Header: React.FC<headerStateI> = (props) => {
 				</Link>
 				<div className={classes.buttons}>
 					{props.headerButtonData.map((btn, i) => {
-						return <Button key={i} theme={btn.theme} text={btn.text} />
+						return (
+							<Link to={btn.to} key={i}>
+								<Button theme={btn.theme} text={btn.text} />
+							</Link>
+						)
 					})}
 				</div>
 			</div>

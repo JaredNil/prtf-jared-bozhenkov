@@ -7,9 +7,9 @@ import SomeSection from './components/someSection/someSection';
 const ApplicationPage: React.FC = (props) => {
 
 	const headerButtonData: buttonDataType = [
-		{ theme: 'dark', text: 'Login' },
-		{ theme: 'dark', text: 'Links to us' },
-		{ theme: 'dark', text: 'Telegram' },
+		{ theme: 'dark', text: 'Login', to: '/login' },
+		{ theme: 'purple', text: 'Links to us', to: '/' },
+		{ theme: 'dark', text: 'Telegram', to: '/' },
 	]
 
 	return (
