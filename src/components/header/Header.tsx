@@ -21,7 +21,7 @@ const Header: React.FC<headerStateI> = (props) => {
 					{props.headerButtonData.map((btn, i) => {
 						return (
 							<Link to={btn.to} key={i}>
-								<Button theme={btn.theme} text={btn.text} />
+								<Button theme={btn.theme} text={btn.text} icon={btn.icon} />
 							</Link>
 						)
 					})}

@@ -1,10 +1,16 @@
-import React from 'react';
-import classes from './sidebar.module.css'
+import React, { useRef } from 'react';
+import classes from './sidebar.module.scss'
 
 const Sidebar: React.FC = () => {
+	const snapNodeRef = useRef<HTMLDivElement | any>()
+	const snapClickHandler = () => {
+		snapNodeRef.current.classList.toggle(classes._active)
+	}
+
+
 	return (
 		<div className={classes.sidebar}>
-			<div className="sidebar__box">
+			<div className={classes.sidebar__box}>
 				<div className="box__intro">
 					<div className="box__intro-title">	Chapter 01	</div>
 					<div className="box__intro-text">	Basics	</div>
@@ -16,14 +22,11 @@ const Sidebar: React.FC = () => {
 				<div>ссылка</div>
 				<div>ссылка</div>
 			</div>
-			<div className="sidebar__snap">
-				<div className="snap__locked">
-					<span className='top'></span>
-					<span className='mid'></span>
-					<span className='low'></span>
-				</div>
-				<div className="snap__open">
-					<span className='arrow'>{'<-'}</span>
+			<div className={classes.sidebar__snap}>
+				<div className={classes.snap} ref={snapNodeRef} onClick={snapClickHandler}>
+					<span className={classes.top}></span>
+					<span className={classes.mid}></span>
+					<span className={classes.low}></span>
 				</div>
 			</div>
 		</div>

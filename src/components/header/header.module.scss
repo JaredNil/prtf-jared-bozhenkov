@@ -21,10 +21,6 @@
 .logo {
 	display: flex;
 	padding: 6px 2px;
-	.logo .logo__picture {
-	}
-	.logo .logo__text {
-	}
 }
 
 .buttons {
@@ -86,13 +82,23 @@
 .button__icon {
 	position: relative;
 	z-index: 150;
+	height: 18px;
+	width: 18px;
 	margin: 0 15px;
 	pointer-events: none;
+	svg {
+		width: 18px;
+		height: 18px;
+	}
 }
 
 .button__text {
 	position: relative;
 	z-index: 150;
+
+	font-size: 18px;
+	line-height: 18px;
+
 	margin-right: 15px;
 	pointer-events: none;
 }

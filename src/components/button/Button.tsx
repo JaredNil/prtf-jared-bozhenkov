@@ -3,6 +3,18 @@ import { buttonData } from '../../types';
 
 import classes from '../header/header.module.scss'
 
+import { BiArrowFromLeft, BiExpand } from "react-icons/bi";
+import { FaTelegramPlane } from "react-icons/fa";
+
+const createIconComponent = (icon: string) => {
+
+	if (icon === 'arrowRight') return < BiArrowFromLeft />
+	if (icon === 'BiExpand') return < BiExpand />
+	if (icon === 'FaTelegramPlane') return < FaTelegramPlane />
+
+	return '->'
+};
+
 
 const Button: React.FC<buttonData> = (props) => {
 	const buttonRef = useRef<HTMLDivElement | any>()
@@ -29,7 +41,9 @@ const Button: React.FC<buttonData> = (props) => {
 				onMouseMove={mouseMoveHandler} onMouseLeave={mouseLeaveHandler}
 			>
 				<span className={classes.button__hover + ' ' + classes.button__hover_mouseStart}></span>
-				<div className={classes.button__icon}>ic</div>
+				<div className={classes.button__icon}>
+					{createIconComponent(props.icon)}
+				</div>
 				<div className={classes.button__text}>{props.text}</div>
 			</div>
 		</div >
@@ -37,3 +51,5 @@ const Button: React.FC<buttonData> = (props) => {
 };
 
 export default Button;
+
+
