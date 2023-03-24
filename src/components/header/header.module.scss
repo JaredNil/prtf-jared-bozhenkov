@@ -65,17 +65,17 @@
 	top: 0;
 	height: 100%;
 	background-color: rgba(91, 91, 91, 0.472);
-	transition: left 0.4s ease-in 0s, width 1s ease-in 0s;
+	transition: left 0.6s ease-out 0s, width 1s ease-in 0s;
 
 	transform: translate(-50%);
 }
 
 .button__hover_mouseStart {
-	left: -50%;
+	left: -52%;
 	width: 100%;
 }
 .button__hover_mouseEnd {
-	left: 150%;
+	left: 152%;
 	width: 100%;
 }
 .button__hover_mouseMove {
