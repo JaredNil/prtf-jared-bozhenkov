@@ -3,8 +3,10 @@ import React, { useRef } from 'react';
 import classes from './sidebar.module.scss'
 
 import ButtonSidebar from './buttonSidebar/ButtonSidebar';
+import { sidebarStateI } from '../../types';
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC<sidebarStateI> = (props) => {
+
 	const snapNodeRef = useRef<HTMLDivElement | any>()
 	const sidebarNodeRef = useRef<HTMLDivElement | any>()
 
@@ -24,8 +26,11 @@ const Sidebar: React.FC = () => {
 					<div className={classes.box__intro_text}>	Проекты	</div>
 				</div>
 				<div className={classes.box__links}>
-
-					<ButtonSidebar />
+					{
+						props.stateSidebarBox.map((link, i) => {
+							return <ButtonSidebar iconComp={link.iconComp} title={link.title} />
+						})
+					}
 				</div>
 
 			</div>

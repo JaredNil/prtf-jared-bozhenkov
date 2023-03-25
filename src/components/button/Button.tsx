@@ -6,7 +6,7 @@ import classes from '../header/header.module.scss'
 import { BiArrowFromLeft, BiExpand } from "react-icons/bi";
 import { FaTelegramPlane } from "react-icons/fa";
 
-const createIconComponent = (icon: string) => {
+export const createIconComponent = (icon: string) => {
 
 	if (icon === 'arrowRight') return < BiArrowFromLeft />
 	if (icon === 'BiExpand') return < BiExpand />

@@ -5,21 +5,25 @@ import { Link } from 'react-router-dom';
 
 import { BsFillCloudsFill } from "react-icons/bs";
 import classes from '../sidebar.module.scss'
+import { createIconComponent } from './../../button/Button';
 
 
-const ButtonSidebar = () => {
+const ButtonSidebar = (props: any) => {
+
 
 	const linkNodeRef = useRef<any>()
-	let linkNodeRefClassesList: any
+
 	let linkNodeRefHover: any
 	useEffect(() => {
-		linkNodeRefClassesList = linkNodeRef.current.children[0].classList
+
 		linkNodeRefHover = linkNodeRef.current.children[0].style
 	}, [linkNodeRef])
+
 
 	const mouseEnterHandler = () => {
 		linkNodeRefHover.width = '100%'
 	}
+
 	const mouseLeaveHandler = () => {
 		setTimeout(() => {
 			linkNodeRefHover.width = '0%'
@@ -35,10 +39,10 @@ const ButtonSidebar = () => {
 		>
 			<span className={classes._hover + ' ' + classes._hover_mouseStart} />
 			<div className={classes.box__link_text}>
-				Some link
+				{props.title}
 			</div>
 			<div className={classes.box__link_logo}>
-				<BsFillCloudsFill />
+				{createIconComponent(props.iconComp)}
 			</div>
 		</Link>
 	);
