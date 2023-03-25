@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 
-import { BsFillCloudsFill } from "react-icons/bs";
-
 import classes from './sidebar.module.scss'
+
+import ButtonSidebar from './buttonSidebar/ButtonSidebar';
 
 const Sidebar: React.FC = () => {
 	const snapNodeRef = useRef<HTMLDivElement | any>()
@@ -12,6 +12,7 @@ const Sidebar: React.FC = () => {
 		snapNodeRef.current.classList.toggle(classes._active)
 		sidebarNodeRef.current.classList.toggle(classes._hide)
 	}
+
 
 
 	return (
@@ -24,32 +25,7 @@ const Sidebar: React.FC = () => {
 				</div>
 				<div className={classes.box__links}>
 
-					<div className={classes.box__link}>
-						<div className={classes.box__link_text}>
-							Some link
-						</div>
-						<div className={classes.box__link_logo}>
-							<BsFillCloudsFill />
-						</div>
-					</div>
-
-					<div className={classes.box__link}>
-						<div className={classes.box__link_text}>
-							Some link
-						</div>
-						<div className={classes.box__link_logo}>
-							<BsFillCloudsFill />
-						</div>
-					</div>
-
-					<div className={classes.box__link}>
-						<div className={classes.box__link_text}>
-							Some link
-						</div>
-						<div className={classes.box__link_logo}>
-							<BsFillCloudsFill />
-						</div>
-					</div>
+					<ButtonSidebar />
 				</div>
 
 			</div>

@@ -40,7 +40,7 @@ const Button: React.FC<buttonData> = (props) => {
 				className={`${classes.button__container} ${classes[props.theme]}`}
 				onMouseMove={mouseMoveHandler} onMouseLeave={mouseLeaveHandler}
 			>
-				<span className={classes.button__hover + ' ' + classes.button__hover_mouseStart}></span>
+				<span className={classes.button__hover + ' ' + classes.button__hover_mouseStart} />
 				<div className={classes.button__icon}>
 					{createIconComponent(props.icon)}
 				</div>
