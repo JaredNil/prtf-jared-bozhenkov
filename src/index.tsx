@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom'
 
 import './index.css';
-import ApplicationPage from './ApplicationPage';
+import Application from './Application';
 
 
 const root = ReactDOM.createRoot(
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<ApplicationPage />
+			<Application />
 		</BrowserRouter>
 	</React.StrictMode>
 );

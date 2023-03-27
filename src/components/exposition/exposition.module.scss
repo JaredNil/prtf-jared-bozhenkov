@@ -1,0 +1,133 @@
+.exposition {
+	background-color: #666666;
+
+	position: relative;
+	z-index: 0;
+	width: 100vw;
+	min-height: 800px;
+
+	display: flex;
+	justify-content: center;
+
+	* {
+		color: #fff;
+	}
+}
+
+.exposition__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.portrait_container,
+.dossier_container {
+	background-color: #1a1a1a;
+	border-radius: 30px;
+	padding: 30px;
+}
+
+.portrait_container {
+	flex: 0 1 30%;
+}
+.dossier_container {
+	flex: 0 1 65%;
+}
+
+.portrait {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.portrait__photo {
+	img {
+	}
+}
+.portrait__FIO {
+	font-size: 26px;
+}
+.portrait__profession {
+	background-color: #666666;
+	border-radius: 6px;
+	font-size: 22px;
+	padding: 8px 11px;
+}
+.portrait__icons {
+	display: flex;
+	.portrait__icon {
+	}
+}
+
+.contact {
+	background-color: #666666;
+	border-radius: 6px;
+	padding: 8px 11px;
+
+	display: flex;
+	flex-direction: column;
+}
+.contact_item {
+	display: flex;
+	align-items: center;
+	padding: 12px 10px;
+	.contact_logo {
+	}
+	.contact_info {
+		.contact_title {
+		}
+		.contact_text {
+		}
+	}
+}
+
+.download {
+	margin-top: 40px;
+	padding: 12px 14px;
+	border-radius: 6px;
+	background: linear-gradient(to right, red, rgb(155, 109, 0));
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	cursor: pointer;
+	* {
+		pointer-events: none;
+		user-select: none;
+		margin: 0 8px;
+	}
+}
+
+.dossier {
+	display: flex;
+	flex-direction: column;
+}
+.dossier__upline {
+	display: flex;
+	.dossier__upline_text {
+		font-size: 30px;
+	}
+}
+.dossier__explain {
+	padding: 40px 0;
+	p {
+		padding: 4px 0;
+	}
+}
+
+.dossier__skills {
+	display: flex;
+	flex-direction: column;
+	p {
+		line-height: 20px;
+	}
+	margin-bottom: 20px;
+}
+
+.dossier__tech_container {
+	background-color: #666666;
+	border-radius: 12px;
+}
+.dossier__tech {
+	padding: 12px;
+
+	display: flex;
+	flex-wrap: wrap;
+}

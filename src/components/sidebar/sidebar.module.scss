@@ -1,5 +1,6 @@
 .sidebar {
 	position: fixed;
+	z-index: 300;
 	top: 40vh;
 	width: 450px;
 	transform: translate(8px);
