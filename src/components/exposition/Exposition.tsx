@@ -1,14 +1,22 @@
 import React from 'react';
+import Contact from './Contact';
+
 import classes from './exposition.module.scss';
 import classesApp from './../app.module.scss'
 
-import { BsTelegram, BsPhoneFill } from 'react-icons/bs';
-import { MdEmail } from 'react-icons/md'
-import { FaBirthdayCake } from 'react-icons/fa'
+import { BsTelegram } from 'react-icons/bs';
+
+import { FaGithub } from 'react-icons/fa'
 import { ImDownload } from 'react-icons/im'
+import { Link } from 'react-router-dom';
+
+
 
 
 const Exposition: React.FC = () => {
+
+
+
 	return (
 		<section className={classes.exposition}>
 			<div className={classes.exposition__container + ' ' + classesApp.container}>
@@ -16,43 +24,24 @@ const Exposition: React.FC = () => {
 				<div className={classes.portrait_container}>
 					<div className={classes.portrait}>
 						<div className={classes.portrait__photo}>
-							<img srcSet='/' />
+							<div className={classes.portrait__photo_img}
+							//  srcSet='/'
+							/>
 						</div>
 						<div className={classes.portrait__FIO}>Jared Bozh</div>
 						<div className={classes.portrait__profession}>React.ts developer</div>
 						<div className={classes.portrait__icons}>
-							<div className={classes.portrait__icon}><BsTelegram />				</div>
-							<div className={classes.portrait__icon}><BsTelegram /></div>
-							<div className={classes.portrait__icon}><BsTelegram /></div>
-							<div className={classes.portrait__icon}><BsTelegram />github</div>
+							<Link to={'https://t.me/drag11'} className={classes.portrait__icon}><BsTelegram size={'20px'} /></Link>
+							<Link to={'https://t.me/drag11'} className={classes.portrait__icon}><BsTelegram size={'20px'} /></Link>
+							<Link to={'https://t.me/drag11'} className={classes.portrait__icon}><BsTelegram size={'20px'} /></Link>
+							<Link
+								to={'https://github.com/JaredNil'}
+								className={classes.portrait__icon}>
+								<FaGithub size={'20px'} />
+							</Link>
 						</div>
-						<div className={classes.contact}>
-
-							<div className={classes.contact_item}>
-								<div className={classes.contact_logo}><BsPhoneFill /></div>
-								<div className={classes.contact_info}>
-									<div className={classes.contact_title}>Phone</div>
-									<div className={classes.contact_text}>89086605214</div>
-								</div>
-							</div>
-							<div className={classes.contact_item}>
-								<div className={classes.contact_logo}><MdEmail /></div>
-								<div className={classes.contact_info}>
-									<div className={classes.contact_title}>Email</div>
-									<div className={classes.contact_text}>jared.bozh@gmail.com</div>
-								</div>
-							</div>
-							<div className={classes.contact_item}>
-								<div className={classes.contact_logo}><FaBirthdayCake /></div>
-								<div className={classes.contact_info}>
-									<div className={classes.contact_title}>Birthday</div>
-									<div className={classes.contact_text}>01 Jan 2000, 23 y.o</div>
-								</div>
-							</div>
-
-						</div>
-
-						<div className={classes.download}>
+						<Contact />
+						<div className={classes.download} onClick={() => { alert('Скачать резюме') }}>
 							<ImDownload />
 							<span>Download resume</span>
 						</div>
